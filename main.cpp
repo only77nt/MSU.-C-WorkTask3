@@ -39,9 +39,9 @@ case 1: {	/*Прямоугольник*/
 				throw A;
 			}
 			clean_stdin();
-			Rectangle Rec(l,w);
+			Rectangle Rec(l,w,0);
 			S=Rec.area();
-			Rec.print(S); 
+			Rec.print(S,0); 
 			cout << endl;
 			break;
 		}
@@ -57,7 +57,7 @@ case 2: {	/*Треугольник*/
 			clean_stdin();
 			Triangle Tri(l,0,h);
 			S=Tri.area();
-			Tri.print(S); 
+			Tri.print(S,0); 
 			cout << endl;
 			break;
 		}
@@ -71,7 +71,7 @@ case 3: {	/*Сфера*/
 				throw A;
 			}
 			clean_stdin();
-			Sphere Sph(h);
+			Sphere Sph(h,0,0);
 			S=Sph.area();
 			V=Sph.volume();
 			Sph.print(S,V);
@@ -124,18 +124,18 @@ case 5: {	/*Сечение с дыркой*/
 			break;
 		}
 case 6: {	/*Информация о всех фигурах*/
-			Rectangle Rec(2,3); /*S=6*/
+			Rectangle Rec(2,3,0); /*S=6*/
 			Triangle Tri(4,0,5); /*S=10*/
-			Sphere Sph(0.5); /*S=3.14*/
+			Sphere Sph(0.5,0,0); /*S=3.14*/
 			Parall Par(1,2,3); /*S=22*/
 			Figure *arr[] = {(Figure *) &Rec, (Figure *) &Tri, (Figure *) &Sph, (Figure *) &Par};
 			TotalPrint(arr,sizeof(arr)/sizeof(Figure*));
 			break;
 		}
 case 7: {	/*Общая площадь всех фигур*/
-			Rectangle Rec(2,3); /*S=6*/
+			Rectangle Rec(2,3,0); /*S=6*/
 			Triangle Tri(4,0,5); /*S=10*/
-			Sphere Sph(0.5); /*S=3.14*/
+			Sphere Sph(0.5,0,0); /*S=3.14*/
 			Parall Par(1,2,3); /*S=22*/
 			Figure *arr[] = {(Figure *) &Rec, (Figure *) &Tri, (Figure *) &Sph, (Figure *) &Par};
 			TotalArea(arr,sizeof(arr)/sizeof(Figure*));

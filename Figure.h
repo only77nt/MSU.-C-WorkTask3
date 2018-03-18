@@ -8,7 +8,7 @@ public:
 	const char* what();
 };
 
-void clean_stdin(void);
+void clean_stdin(void); /*Очистка потока ввода*/
 
 class Figure{ /*КЛАСС ФИГУРА*/
 
@@ -23,9 +23,9 @@ double heigth; /*Высота*/
 Figure(double,double,double);
 Figure();
 virtual ~Figure();
-virtual void print(double,double) const =0;
-virtual double area() const =0;
-virtual double volume() const =0;
+virtual void print(double,double) const =0; /*Функция печати информации*/
+virtual double area() const =0; /*Функция нахождения площади фигуры*/
+virtual double volume() const =0; /*Функция нахождения объёма фигуры*/
 };
 
 class Rectangle: Figure{ /*КЛАСС ПРЯМОУГОЛЬНИК*/
@@ -54,10 +54,10 @@ public:
 Sphere();
 Sphere(double,double,double);
 ~Sphere();
-virtual void print(double,double) const;
-virtual double area() const;
-virtual double volume() const;
-double Section(double) const;
+virtual void print(double,double) const; 
+virtual double area() const; 
+virtual double volume() const; 
+double Section(double) const; /*Метод нахождения площади сечения*/
 };
 
 class Parall: Figure{ /*КЛАСС ПАРАЛЛЕЛЕПИПЕД*/
@@ -69,7 +69,7 @@ Parall(double l1,double,double);
 virtual void print(double,double) const;
 virtual double area() const;
 virtual double volume() const;
-double Section(double,double) const;
+double Section(double,double) const; /*Метод нахождения площади сечения*/
 };
 
 class Notch: public Parall,public Sphere{ /*Класс-сечение для ромбовидного наследования*/

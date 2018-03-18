@@ -29,9 +29,7 @@ Figure::Figure(double l1,double w1=0,double h1=0){ /*Присваиваем зн
 }
 Figure::Figure(){};
  Figure::~Figure() {};
-void Figure::print(double area,double volume=0) const =0; /*ОШИБКА*/
-double Figure::area() const =0; /*ОШИБКА*/
-double Figure::volume() const =0; /*ОШИБКА*/
+
 
 Rectangle::Rectangle(double l1,double w1,double h1=0): Figure(l1,w1,h1){};
 Rectangle::~Rectangle(){};
