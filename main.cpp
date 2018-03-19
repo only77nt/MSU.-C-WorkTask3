@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Figure.h"
+#include "Notch.h"
 using namespace std;
 
 int main(void){ /*Функция-MAIN*/
@@ -28,6 +28,12 @@ printf("7. Сумма площадей всех фигур\n");
 printf("8. Clear\n");
 printf("9. Exit\n");
 cin >> input;
+if(input<1 || input>9)
+{
+	Excpt A;
+	strcpy(A.msg,"Wrong input!");
+	throw A;
+}
 switch(input){
 case 1: {	/*Прямоугольник*/
 			cout << "Введите длину и ширину: ";
