@@ -23,3 +23,6 @@ double Rectangle::volume() const { /*Плоская фигура -> объём=0
 	double res=0;
 	return res;
 }
+void Rectangle::cprint() const {
+	cout << "Я прямоугольник. У меня " << this->corners << " угла!" << endl;
+}

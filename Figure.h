@@ -17,6 +17,7 @@ public:
 double length; /*Длина*/
 double width; /*Ширина*/
 double heigth; /*Высота*/
+int corners; /*Количество углов*/
 
 Figure(double,double,double);
 Figure();

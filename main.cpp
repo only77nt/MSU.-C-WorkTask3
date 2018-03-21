@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Notch.h"
+#include "Corners.h"
 using namespace std;
 
 int main(void){ /*Функция-MAIN*/
@@ -25,10 +25,11 @@ printf("4. Найти площадь поверхности и объём пар
 printf("5. Найти площадь фигуры полученной в результате наложения прямоугольника и круга\n");
 printf("6. Вывести информацию о всех имеющихся фигурах\n");
 printf("7. Сумма площадей всех фигур\n");
-printf("8. Clear\n");
-printf("9. Exit\n");
+printf("8. Показать сколько углов у треугольника и прямоугольника\n");
+printf("9. Clear\n");
+printf("10. Exit\n");
 cin >> input;
-if(input<1 || input>9)
+if(input<1 || input>10)
 {
 	Excpt A;
 	strcpy(A.msg,"Wrong input!");
@@ -147,11 +148,23 @@ case 7: {	/*Общая площадь всех фигур*/
 			TotalArea(arr,sizeof(arr)/sizeof(Figure*));
 			break;
 		}
-case 8: {   /*Clear*/
+case 8: {   /*Углы*/
+			Rectangle Rec(2,3,0);
+			Triangle Tri(4,0,5);
+			Rec.corners=4;
+			Rec.cprint();
+			Tri.corners=3;
+			Tri.cprint();
+			Corner C(0,0,0);
+			C.corners=4;
+			C.CornPrint(Tri.corners,Rec.corners,C.corners);
+			break;
+		}
+case 9: {   /*Clear*/
 			system("clear");
 			break;
 		}
-case 9: {   /*Exit*/			
+case 10: {   /*Exit*/			
 			exit(0);
 		}
 }

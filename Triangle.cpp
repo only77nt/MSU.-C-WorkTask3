@@ -23,3 +23,8 @@ double Triangle::volume() const { /*Плоская фигура -> объём=0*
 	double res=0;
 	return res;
 }
+void Triangle::cprint() const {	
+	cout << "Я треугольник. У меня " << this->corners << " угла!" << endl;
+}
+
+

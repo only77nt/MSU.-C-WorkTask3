@@ -26,6 +26,7 @@ Figure::Figure(double l1,double w1=0,double h1=0){ /*Присваиваем зн
 	this->length=l1;
 	this->width=w1;
 	this->heigth=h1;
+	this->corners=0;
 }
 Figure::Figure(){};
 Figure::~Figure() {};

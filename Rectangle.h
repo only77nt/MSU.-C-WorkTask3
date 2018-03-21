@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Figure.h"
 
-class Rectangle: Figure{ /*КЛАСС ПРЯМОУГОЛЬНИК*/
+class Rectangle: virtual public Figure{ /*КЛАСС ПРЯМОУГОЛЬНИК*/
 
 public:
 Rectangle(double,double,double);
@@ -9,4 +9,5 @@ Rectangle(double,double,double);
 virtual void print(double,double) const;
 virtual double area() const;
 virtual double volume() const;
+void cprint() const;
 };

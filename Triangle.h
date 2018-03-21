@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Rectangle.h"
 
-class Triangle: Figure{ /*КЛАСС ТРЕУГОЛЬНИК*/
+class Triangle: virtual public Figure{ /*КЛАСС ТРЕУГОЛЬНИК*/
 
 public:
 Triangle(double,double,double);
@@ -9,4 +9,5 @@ Triangle(double,double,double);
 virtual void print(double,double) const;
 virtual double area() const;
 virtual double volume() const;
+void cprint() const;
 };

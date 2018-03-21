@@ -1,14 +1,15 @@
 all: create compile
 CFLAGS = -g
-create:	Figure.cpp Figure.h Triangle.h Rectangle.h Sphere.h Parall.h Notch.h
+create:	Figure.cpp Figure.h Triangle.h Rectangle.h Sphere.h Parall.h Notch.h Corners.cpp Corners.h
 		g++ $(CFLAGS) -c Figure.cpp Figure.h
 		g++ $(CFLAGS) -c Triangle.cpp Triangle.h
 		g++ $(CFLAGS) -c Rectangle.cpp Rectangle.h
 		g++ $(CFLAGS) -c Sphere.cpp Sphere.h
 		g++ $(CFLAGS) -c Parall.cpp  Parall.h
 		g++ $(CFLAGS) -c Notch.cpp  Notch.h
-compile: main.cpp Figure.o Triangle.o Rectangle.o Sphere.o Parall.o Notch.o
-		 g++ $(CFLAGS) main.cpp Figure.o Triangle.o Rectangle.o Sphere.o Parall.o Notch.o -o run.out
+		g++ $(CFLAGS) -c Corners.cpp Corners.h
+compile: main.cpp Figure.o Triangle.o Rectangle.o Sphere.o Parall.o Notch.o Corners.o
+		 g++ $(CFLAGS) main.cpp Figure.o Triangle.o Rectangle.o Sphere.o Parall.o Notch.o Corners.o -o run.out
 run: 
 		./run.out
 clean:
@@ -25,4 +26,6 @@ clean:
 		rm Notch.h.gch
 		rm Triangle.h.gch
 		rm Rectangle.h.gch
+		rm Corners.o
+		rm Corners.h.gch
 		
